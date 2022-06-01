@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head.ejs') %>
-<body>
-    <h1>show page</h1>
-    
-</body>
-</html>
+    <body>
+        <div class="create">
+            <h1><%= user.email %></h1>
+            <a href="/homepage">homepage</a>
+            <ul>
+                <li>Horse: <%=user.horse[0].horseName %>
+                </li>  
+            </ul>
+        <a href="/homepage/<%=user._id %>/edit"><button class="formbutton">Edit</button></a>
+            <form action="/homepage/<%=user._id %>?_method=DELETE" method="POST">
+                <input class="formbutton" type="submit" value="Delete"/>
+            </form> 
+        </div>
+    </body>
+    </html>
