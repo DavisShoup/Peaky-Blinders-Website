@@ -6,13 +6,16 @@
             <h1><%= user.email %></h1>
             <a href="/homepage">homepage</a>
             <ul>
-                <li>Horse: <%=user.horse[0].horseName %>
+                <h2>Horses: </h2><%for( let i = 0; i < user.horse.length; i++){ %>
+                    <li><%=user.horse[i].horseName%></br>
+                    <a href="/homepage/<%=user._id %>/<%=user.horse[i].horseName%>"><img class="image" src="<%=user.horse[i].horseImg%>"></a></br>
+                    <a href="/homepage/<%=user._id %>/edit"><button class="formbutton">Edit</button></a>
+                    <form action="/homepage/<%=user._id%>/?_method=DELETE" method="POST">
+                    <input class="formbutton" type="submit" value="Delete"/>
+                    </form>
+                    <%}%>
                 </li>  
             </ul>
-        <a href="/homepage/<%=user._id %>/edit"><button class="formbutton">Edit</button></a>
-            <form action="/homepage/<%=user._id %>?_method=DELETE" method="POST">
-                <input class="formbutton" type="submit" value="Delete"/>
-            </form> 
         </div>
     </body>
     </html>

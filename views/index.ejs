@@ -4,16 +4,12 @@
 <body>
     <h1>index page</h1>
 		<%- include('./partials/header.ejs') %>
-        <% console.log(users[0])%>
-		<% users.forEach(users => {%>
+		<% users.forEach(user => {%>
 		<div>
-			<a href="/homepage/<%=users._id%>">User ID</a>
-            <a class="name" href="/homepage/<%=users._id%>"> 
-                <% for(let i = 0;%>
-                    <% 
-                    <% }); %>
-            </a>
+			<a href="/homepage/<%=user._id%>"><%=user.username%></a></br>
+            <a href="/homepage/<%=user._id%>"><img class="userImg" src="<%=user.userImg%>%>"></a>
+            <a class="name" href="/homepage/<%=user._id%>"></a></br>
 		</div>
-		<%})%>	
+		<%})%>
 </body>
 </html>

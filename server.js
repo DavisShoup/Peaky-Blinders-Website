@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const db = mongoose.connection;
 const homePage = require('./controllers/users.js');
+const routerHorse = require('./controllers/horse.js')
+const routerIndex = require('./controllers/index.js')
 
 // Database Connection
 
@@ -21,7 +23,9 @@ mongoose.connect(process.env.DATABASE_URL, {
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + "/public"));
-app.use('/homepage', homePage)
+app.use('/homepage', homePage);
+app.use('/', routerHorse);
+app.use('/', routerIndex);
 
 // Route
 
