@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <table>
+        <form action="/homepage/<%=user._id%>" method="POST">
+            Img URL:</br>
+            <tr><input type="text" name="horseImg" placeholder="Image URL" value="https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/c0/4c/dd/c04cdd3f-baa9-f1d8-0bc3-6b6fae23497c/source/256x256bb.jpg"/></tr>
+            <td>Name:<input type="text" name="horseName" placeholder="Name"/><br/></td>
+            <td>Breed:<input type="text" name="breed" placeholder="Breed"/> <br/></td>
+            <td>Height:<input type="number" name="height" placeholder="Height (inches)"/> <br/></td>
+            <td>Color:<input type="text" name="color" placeholder="Color"/><br/></td>
+            <td>Number:<input type="number" name="number" placeholder="Saddle Cloth Number"/><br/></td>
+            <td>Horseshoe Type:<input type="text" name="horseShoe" placeholder="Type of Horseshoe"/><br/></td>
+            <td>Jockey's Name:<input type="text" name="jockeyName" placeholder="Jockey's Name"/><br/></td>
+            <td><input class="formbutton1" type="submit" value="Create"/><br/></td>
+        </form>
+      </table>
+</body>
+</html>

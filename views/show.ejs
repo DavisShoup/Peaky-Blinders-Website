@@ -5,12 +5,22 @@
         <div class="create">
             <h1><%= user.email %></h1>
             <a href="/homepage">homepage</a>
+            <a href="/homepage/<%=user._id%>/new"><button>Add a horse</button></a>
             <ul>
                 <h2>Horses: </h2><%for( let i = 0; i < user.horse.length; i++){ %>
-                    <li><%=user.horse[i].horseName%></br>
-                    <a href="/homepage/<%=user._id %>/<%=user.horse[i].horseName%>"><img class="image" src="<%=user.horse[i].horseImg%>"></a></br>
-                    <a href="/homepage/<%=user._id %>/edit"><button class="formbutton">Edit</button></a>
-                    <form action="/homepage/<%=user._id%>/?_method=DELETE" method="POST">
+                    <li>Name: <%=user.horse[i].horseName%></br>
+                        Breed: <%=user.horse[i].breed%></br>
+                        Height: <%=user.horse[i].height%></br>
+                        Color: <%=user.horse[i].color%></br>
+                        Saddle Number: <%=user.horse[i].number%></br>
+                        Horseshoe Type: <%=user.horse[i].horseShoe%></br>
+                        Jockey's Name: <%=user.horse[i].jockeyName%></br>
+                    <img class="horseImage" src="<%=user.horse[i].horseImg%>"></br>
+                    <form action="/homepage/<%=user._id%>/<%=user.horse[i]._id%>/edit/">
+                        <input type="hidden" value="<%= i %>" name="key"/>
+                        <input class="formbutton" type="submit" value="Edit"/>
+                    </form>
+                    <form action="/homepage/<%=user._id%>/<%=user.horse[i]._id%>/?_method=DELETE" method="POST">
                     <input class="formbutton" type="submit" value="Delete"/>
                     </form>
                     <%}%>

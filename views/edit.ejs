@@ -4,18 +4,18 @@
 <body>
     <div class="create">
         <h1>Edit Horse</h1>
-        <a href="/homepage/<%=user._id%>"><img src="<%user.horse.horseImg%>"><br/></a>
+        <a href="/homepage/<%=user._id%>"><img class="horseImage" src="<%=horseImg%>"><br/></a>
         <table>
-        <form action="/homepage/<%=user._id%>?_method=PUT" method="POST">
+        <form action="/homepage/<%=user._id%>/<%=horseID%>/?_method=PATCH" method="POST">
             Img URL:</br>
-            <tr><input class="url" type="text" name="horseImg" placeholder="Image URL" value="https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/c0/4c/dd/c04cdd3f-baa9-f1d8-0bc3-6b6fae23497c/source/256x256bb.jpg"/></tr>
-            <td><input type="text" name="horseName" placeholder="Name"/><br/></td>
-            <td><input type="text" name="breed" placeholder="Breed"/> <br/></td>
-            <td><input type="number" name="height" placeholder="Height (inches)"/> <br/></td>
-            <td><input type="text" name="color" placeholder="Color"/><br/></td>
-            <td><input type="number" name="number" placeholder="Saddle Cloth Number"/><br/></td>
-            <td><input type="text" name="horseShoe" placeholder="Type of Horseshoe"/><br/></td>
-            <td><input type="text" name="jockeyName" placeholder="Jockey's Name"/><br/></td>
+            <tr><input type="text" name="horseImg" placeholder="Image URL" value="https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/c0/4c/dd/c04cdd3f-baa9-f1d8-0bc3-6b6fae23497c/source/256x256bb.jpg"/></tr>
+            <td>Name:<input type="text" name="horseName" placeholder="Name" value="<%=horseName%>"/><br/></td>
+            <td>Breed:<input type="text" name="breed" placeholder="Breed" value="<%=breed%>"/> <br/></td>
+            <td>Height:<input type="number" name="height" placeholder="Height (inches)" value="<%=height%>"/> <br/></td>
+            <td>Color:<input type="text" name="color" placeholder="Color" value="<%=color%>"/><br/></td>
+            <td>Number:<input type="number" name="number" placeholder="Saddle Cloth Number" value="<%=number%>"/><br/></td>
+            <td>Horseshoe Type:<input type="text" name="horseShoe" placeholder="Type of Horseshoe" value="<%=horseShoe%>"/><br/></td>
+            <td>Jockey's Name:<input type="text" name="jockeyName" placeholder="Jockey's Name" value="<%=jockeyName%>"/><br/></td>
             <td><input class="formbutton1" type="submit" value="Submit"/><br/></td>
         </form>
       </table>

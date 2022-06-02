@@ -28,43 +28,65 @@ router.get('/', (req, res) => {
 
 //NEW
 
+router.get('/:id/new', (req, res) => {
+    User.findById(req.params.id, (error, foundUser) => {
+        res.render('new.ejs', {
+            user: foundUser,
+        });
+    });
+});
+
 //DELETE
 
-router.delete("/:id", (req,res) => {
-    User.findById(req.params.id, (error, deleteHorse) => {
-        res.redirect("/homepage");
-    })
-})
+router.delete("/:id/:horseID", (req, res) => {
+    User.findById(req.params.id, (error, foundUser) => {
+        foundUser.horse.id(req.params.horseID).remove()
+        foundUser.save()
+    });
+    res.redirect('/homepage')
+});
 
 //UPDATE
 
-router.put('/:id', (req, res) => {
-    User.findByIdAndUpdate(req.params.id, req.body,
-        {
-            new: true,
-        },
-        (error, updateHorse) => {
+router.patch('/:id/:horseID', (req, res) => {
+    User.findById(req.params.id, (error, foundUser) => {
+    foundUser.horse.id(req.params.horseID).horseImg = req.body.horseImg
+    foundUser.horse.id(req.params.horseID).horseName = req.body.horseName
+    foundUser.horse.id(req.params.horseID).breed = req.body.breed
+    foundUser.horse.id(req.params.horseID).height = req.body.height
+    foundUser.horse.id(req.params.horseID).color = req.body.color
+    foundUser.horse.id(req.params.horseID).number = req.body.number
+    foundUser.horse.id(req.params.horseID).horseShoe = req.body.horseShoe
+    foundUser.horse.id(req.params.horseID).jockeyName = req.body.jockeyName
+    foundUser.save()
     res.redirect(`/homepage/${req.params.id}`)
     });
 });
 
-router.patch('/:id', (req, res) => {
-    User.findByIdAndUpdate
-
 //CREATE
 
-router.post('/', (req, res) => {
-    User.create(req.body, (error, createdUser) => {
-        res.redirect('/homepage')
+router.post('/:id', (req, res) => {
+    User.findById(req.params.id, (error, foundUser) => {
+        foundUser.horse.push(req.body);
+        foundUser.save();
 	});
 });
 
 //EDIT
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/:horseID/edit', (req, res) => {
     User.findById(req.params.id, (error, foundUser) => {
         res.render('edit.ejs', {
             user: foundUser,
+            horseID: req.params.horseID,
+            horseImg: foundUser.horse.id(req.params.horseID).horseImg,
+            horseName: foundUser.horse.id(req.params.horseID).horseName,
+            breed: foundUser.horse.id(req.params.horseID).breed,
+            height: foundUser.horse.id(req.params.horseID).height,
+            color: foundUser.horse.id(req.params.horseID).color,
+            number: foundUser.horse.id(req.params.horseID).number,
+            horseShoe: foundUser.horse.id(req.params.horseID).horseShoe,
+            jockeyName: foundUser.horse.id(req.params.horseID).jockeyName,
         });
     });
 });
