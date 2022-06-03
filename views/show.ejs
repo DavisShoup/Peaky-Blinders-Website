@@ -2,7 +2,8 @@
 <html lang="en">
     <%- include('./partials/head.ejs') %>
     <body>
-        <div class="create">
+        <%- include('./partials/header.ejs') %>
+        <div class="container">
             <h1><%= user.email %></h1>
             <a href="/homepage">homepage</a>
             <a href="/homepage/<%=user._id%>/new"><button>Add a horse</button></a>

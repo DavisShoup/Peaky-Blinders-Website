@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head.ejs') %>
+
 <body>
-    <h1>index page</h1>
-		<%- include('./partials/header.ejs') %>
+	<div class="headerdiv">index page</div>
+	<div class="infodiv">Lorem ipsum</div>
+	<%- include('./partials/header.ejs') %>
+	<div class="container">
+		<img class="largepic" src="https://wallpaperaccess.com/full/4386042.jpg"/>
 		<% users.forEach(user => {%>
-		<div>
+		<div class="characters">
 			<a href="/homepage/<%=user._id%>"><%=user.username%></a></br>
             <a href="/homepage/<%=user._id%>"><img class="userImg" src="<%=user.userImg%>%>"></a>
             <a class="name" href="/homepage/<%=user._id%>"></a></br>
 		</div>
 		<%})%>
+	</div>
 </body>
 </html>
