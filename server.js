@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + "/public"));
 app.use('/homepage', homePage);
-app.use('/', routerHorse);
+// app.use('/', routerHorse);
 app.use('/', routerIndex);
 
 // Route

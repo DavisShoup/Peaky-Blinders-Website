@@ -4,6 +4,7 @@ module.exports =
 [
     {
         userImg: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/peaky-blinders-tom-hardy-1-2-1565013406.jpg?crop=0.481xw:0.728xh;0.207xw,0&resize=480:*",
+        bio: "Alfred 'Alfie' Solomons Jr. is a Jewish gang leader who resided in Camden Town, London. It is implied that Alfie's mother was a Russian refugee, where his mother was from and he went to school in London with Darby Sabini.",
         username: "Alfie Solomons",
         email: "samSam@gmail.com",
         password: "abc123",
@@ -29,6 +30,7 @@ module.exports =
     },
     {   
         userImg: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/peaky-blinders-1614180392.jpg?resize=640:*",
+        bio: "Thomas Michael 'Tommy' Shelby OBE DCM MM MP is the son of Arthur and Mrs. Shelby, brother of Arthur, John, Ada and Finn Shelby, father of Charles and Ruby Shelby, as well as being the husband of Grace and Lizzie Shelby. He is the leader of the Birmingham criminal gang, the Peaky Blinders and the patriarch of the Shelby Family.",
         username: "Thomas Shelby",
         email: "tom@gmail.com",
         password: "abc123",
@@ -54,6 +56,7 @@ module.exports =
     },
     {   
         userImg: "https://i2-prod.devonlive.com/incoming/article6493745.ece/ALTERNATES/s1200c/1_Screenshot-2022-01-14-at-140939.png",
+        bio: "William 'Billy' Kimber was an English gangster and head of the Birmingham Boys and thus, the main enemy of Thomas Shelby and the Peaky Blinders. He ran most of the legal tracks outside of London, leading to tensions between Kimber and the Peaky Blinders, who looked to expand their control into inner city London.",
         username: "Billy Kimber",
         email: "billy@gmail.com",
         password: "abc123",
@@ -79,6 +82,7 @@ module.exports =
     },
     {   
         userImg: "https://preview.redd.it/xzsmbhapw0e51.png?auto=webp&s=eec3a069db7beda05b9481e33256d12224a9a52f",
+        bio: "Sir Oswald Mosley is the Minister of the Duchy of Lancaster, the deputy to the Chancellor of the Exchequer and the Cabinet adviser to the Prime Minister of Great Britain. He is also the MP for Smethwick, the constituency bordering South Birmingham, [Shelby]'s constituency. Serving as the main antagonist of Season 5, he is described as the devil and is closely under the supervision of the Peaky Blinders.",
         username: "Oswald Mosley",
         email: "oswald@gmail.com",
         password: "abc123",
@@ -104,6 +108,7 @@ module.exports =
     },
     {   
         userImg: "https://www.personality-database.com/profile_images/124906.png",
+        bio: "Charles 'Darby' Sabini born Ottavio Handley Sabini (11 July 1888 - 4 October 1950) is a British Italian gang leader from London, England. He was at war with Alfie Solomons and Thomas Shelby in Series 2. Darby Sabini serves as the secondary antagonist of the second series.",
         username: "Darby Sabini",
         email: "sabini@gmail.com",
         password: "abc123",

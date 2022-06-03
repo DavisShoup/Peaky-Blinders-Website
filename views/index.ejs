@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head.ejs') %>
-
 <body>
 	<div class="headerdiv">index page</div>
 	<div class="infodiv">Lorem ipsum</div>
@@ -10,9 +9,9 @@
 		<img class="largepic" src="https://wallpaperaccess.com/full/4386042.jpg"/>
 		<% users.forEach(user => {%>
 		<div class="characters">
-			<a href="/homepage/<%=user._id%>"><%=user.username%></a></br>
+			<a class="charactername" href="/homepage/<%=user._id%>"><%=user.username%></a>
             <a href="/homepage/<%=user._id%>"><img class="userImg" src="<%=user.userImg%>%>"></a>
-            <a class="name" href="/homepage/<%=user._id%>"></a></br>
+            <a class="bio" href="/homepage/<%=user._id%>"><%=user.bio%></a>
 		</div>
 		<%})%>
 	</div>
