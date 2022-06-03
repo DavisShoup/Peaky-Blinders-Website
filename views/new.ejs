@@ -2,19 +2,22 @@
 <html lang="en">
     <%- include('./partials/head.ejs') %>
 <body>
+    <%- include('./partials/header.ejs') %>
+    <div class="container">
     <table>
         <form action="/homepage/<%=user._id%>" method="POST">
-            Img URL:</br>
+            <p class="username">Img URL:</p>
             <tr><input type="text" name="horseImg" placeholder="Image URL" value="https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/c0/4c/dd/c04cdd3f-baa9-f1d8-0bc3-6b6fae23497c/source/256x256bb.jpg"/></tr>
-            <td>Name:<input type="text" name="horseName" placeholder="Name"/><br/></td>
-            <td>Breed:<input type="text" name="breed" placeholder="Breed"/> <br/></td>
-            <td>Height:<input type="number" name="height" placeholder="Height (inches)"/> <br/></td>
-            <td>Color:<input type="text" name="color" placeholder="Color"/><br/></td>
-            <td>Number:<input type="number" name="number" placeholder="Saddle Cloth Number"/><br/></td>
-            <td>Horseshoe Type:<input type="text" name="horseShoe" placeholder="Type of Horseshoe"/><br/></td>
-            <td>Jockey's Name:<input type="text" name="jockeyName" placeholder="Jockey's Name"/><br/></td>
-            <td><input class="formbutton1" type="submit" value="Create"/><br/></td>
+            <td class="username">Name:<input type="text" name="horseName" placeholder="Name"/><br/></td>
+            <td class="username">Breed:<input type="text" name="breed" placeholder="Breed"/> <br/></td>
+            <td class="username">Height:<input type="number" name="height" placeholder="Height (inches)"/> <br/></td>
+            <td class="username">Color:<input type="text" name="color" placeholder="Color"/><br/></td>
+            <td class="username">Number:<input type="number" name="number" placeholder="Saddle Cloth Number"/><br/></td>
+            <td class="username">Horseshoe Type:<input type="text" name="horseShoe" placeholder="Type of Horseshoe"/><br/></td>
+            <td class="username">Jockey's Name:<input type="text" name="jockeyName" placeholder="Jockey's Name"/><br/></td>
+            <td class="username"><input class="formbutton1" type="submit" value="Create"/><br/></td>
         </form>
       </table>
+    </div>
 </body>
 </html>

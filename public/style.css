@@ -54,11 +54,6 @@ header {
     background-color: #77999b;
 }
 
-nav{
-    padding-left: 2.5%;
-}
-
-
 .navlinks li {
     display: inline-block;
     margin: auto 0;
@@ -108,6 +103,7 @@ nav{
     left: 61%;
     top: 8%;
     background-color: rgba(255,235,205,.7);
+    font-family: "Montserrat", sans-serif;
 }
 
 .userImg {
@@ -131,11 +127,13 @@ nav{
     position: absolute;
     align-items: center;
     justify-content: center;
-    max-width: 800px;
-    height: 300px;
-    width: 700px;
+    size: 90%;
+    max-width: 37%;
+    height: 25%;
+    width: 50%;
     top: 50%;
     background-color: rgba(255,235,205,.7);
+    font-family: "Montserrat", sans-serif;
 }
 
 .characters {
@@ -143,7 +141,7 @@ nav{
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
-    border: solid rgba(255,235,205) 2px;
+    border-top: solid #c2cfcf 12px;
 }
 
 .charactername {
@@ -158,4 +156,17 @@ nav{
     max-height: 256px;
     width: 20%;
     border: solid rgba(255,235,205) 2px;
+}
+
+ul{
+    padding: 0;
+}
+
+.horsebullet {
+    list-style-type: none;
+}
+
+.username {
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
 }

@@ -4,12 +4,12 @@
     <body>
         <%- include('./partials/header.ejs') %>
         <div class="container">
-            <h1><%= user.email %></h1>
-            <a href="/homepage">homepage</a>
+            <h1 class="username"><%= user.username %></h1>
             <a href="/homepage/<%=user._id%>/new"><button>Add a horse</button></a>
             <ul>
-                <h2>Horses: </h2><%for( let i = 0; i < user.horse.length; i++){ %>
-                    <li>Name: <%=user.horse[i].horseName%></br>
+                <h2 class="username">Horses: </h2><%for( let i = 0; i < user.horse.length; i++){ %>
+                    <div class="characters">
+                    <li class="horsebullet">Name: <%=user.horse[i].horseName%></br>
                         Breed: <%=user.horse[i].breed%></br>
                         Height: <%=user.horse[i].height%></br>
                         Color: <%=user.horse[i].color%></br>
@@ -24,8 +24,9 @@
                     <form action="/homepage/<%=user._id%>/<%=user.horse[i]._id%>/?_method=DELETE" method="POST">
                     <input class="formbutton" type="submit" value="Delete"/>
                     </form>
-                    <%}%>
-                </li>  
+                     </li> 
+                    </div>
+                    <%}%> 
             </ul>
         </div>
     </body>
