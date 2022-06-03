@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+	<div class="headerdiv">"Don't F*** With The Peaky Blinders!"</div>
+	<div class="infodiv">
+		This an ongoing project based off the series, Peaky Blinders. This website allows you to view, edit, delete and create race horses for current users. Eventually, account creation will allow the user to create their own race horses. Users will be able to race horses against eachother and place bets on which horse will win. Select a character below and review each race horse.
+	</div>
+	<%- include('./partials/header.ejs') %>
+	<div class="container">
+		<img class="largepic" src="https://wallpaperaccess.com/full/4386042.jpg"/>
+		<% users.forEach(user => {%>
+		<div class="characters">
+			<a class="charactername" href="/homepage/<%=user._id%>"><%=user.username%></a>
+            <a href="/homepage/<%=user._id%>"><img class="userImg" src="<%=user.userImg%>%>"></a>
+            <a class="bio" href="/homepage/<%=user._id%>"><%=user.bio%></a>
+		</div>
+		<%})%>
+	</div>
+</body>
+</html>
